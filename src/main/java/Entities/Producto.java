@@ -15,9 +15,9 @@ public class Producto {
     public int id;
 
     
-    private String nombre;
-    private String especificacionesTecnicas;
-    private int codigoProducto;
+    public String nombre;
+    public String especificacionesTecnicas;
+    public int codigoProducto;
 
     @OneToOne
     public Oferta o;
