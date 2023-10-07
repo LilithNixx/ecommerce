@@ -18,12 +18,12 @@ public class Proveedor {
     @GeneratedValue(strategy=GenerationType.AUTO)
     public int id;
 
-    private String nombre;
-    private String apellido;
-    private String direccionEntrega;
+    public String nombre;
+    public String apellido;
+    public String direccionEntrega;
 
     //relacion 0..* 
-    private List<Oferta> ofertas;
+    public List<Oferta> ofertas;
 
     public Proveedor() {
         ofertas = new ArrayList<Oferta>();
