@@ -11,6 +11,5 @@ public abstract class CuentaBancaria {
 
     public String verificarSaldo (Float otroSaldo){
         return null;
-        
     }
 }

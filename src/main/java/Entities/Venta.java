@@ -22,6 +22,7 @@ public class Venta {
 
     @OneToOne
     public Comprador c;
+    @OneToOne
     public Oferta o;
 
     public Venta(int id, Date fecha, String descripcion, Float montoTotal, Comprador c) {
