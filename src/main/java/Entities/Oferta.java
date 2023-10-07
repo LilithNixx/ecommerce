@@ -15,11 +15,11 @@ public class Oferta {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 
-    private String descripcion;
-    private int stock;
-    private int codigoOferta;
-    private Float precio;
-    private Date vigencia;
+    public String descripcion;
+    public int stock;
+    public int codigoOferta;
+    public Float precio;
+    public Date vigencia;
 
     @OneToOne
     public Venta v;

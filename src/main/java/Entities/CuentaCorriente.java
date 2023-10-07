@@ -15,9 +15,9 @@ public class CuentaCorriente extends CuentaBancaria {
     @GeneratedValue(strategy=GenerationType.AUTO)
     public int Id;
     
-    private Float saldo;
-    private String cuu;
-    private String estado;
+    public Float saldo;
+    public String cuu;
+    public String estado;
 
     public CuentaCorriente(Float saldo, String cuu, String estado) {
         this.saldo = saldo;

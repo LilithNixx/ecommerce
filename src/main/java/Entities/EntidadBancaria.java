@@ -14,9 +14,9 @@ public class EntidadBancaria {
     @GeneratedValue(strategy=GenerationType.AUTO)
     public int id;
     
-    private String razonSocial;
-    private String direccion;
-    private int nroSucursal;
+    public String razonSocial;
+    public String direccion;
+    public int nroSucursal;
 
     @OneToOne
     public CuentaBancaria cb;

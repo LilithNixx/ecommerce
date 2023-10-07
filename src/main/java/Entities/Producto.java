@@ -3,6 +3,7 @@ package Entities;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.GenerationType;
 
 @Entity
@@ -13,6 +14,7 @@ public class Producto {
     @GeneratedValue(strategy=GenerationType.AUTO)
     public int id;
 
+    
     private String nombre;
     private String especificacionesTecnicas;
     private int codigoProducto;

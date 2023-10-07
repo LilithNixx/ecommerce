@@ -15,9 +15,9 @@ public class Comprador {
     @GeneratedValue(strategy=GenerationType.SEQUENCE)
     public int id;
 
-    private String nombre;
-    private String apellido;
-    private String direccionEntrega;
+    public String nombre;
+    public String apellido;
+    public String direccionEntrega;
 
     //asociacion 1 a 1:
     @OneToOne

@@ -13,9 +13,9 @@ public class CajaAhorro extends CuentaBancaria {
     @GeneratedValue(strategy=GenerationType.SEQUENCE)
     public int id;
 
-    private Float saldo;
-    private String cuu;
-    private String estado;
+    public Float saldo;
+    public String cuu;
+    public String estado;
 
     public CajaAhorro(int id, Float saldo, String cuu, String estado) {
         this.id = id;
