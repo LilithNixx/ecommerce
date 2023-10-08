@@ -8,16 +8,15 @@ import jakarta.persistence.GenerationType;
 
 
 @Entity
-@Getter @Setter
 public class Comprador {
     
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE)
-    public int id;
+    private int id;
 
-    public String nombre;
-    public String apellido;
-    public String direccionEntrega;
+    private String nombre;
+    private String apellido;
+    private String direccionEntrega;
 
     //asociacion 1 a 1:
     @OneToOne
@@ -30,5 +29,40 @@ public class Comprador {
         this.direccionEntrega = direccionEntrega;
         this.v = v;
     }
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getDireccionEntrega() {
+        return direccionEntrega;
+    }
+
+    public void setDireccionEntrega(String direccionEntrega) {
+        this.direccionEntrega = direccionEntrega;
+    }
+
+    
   
 }

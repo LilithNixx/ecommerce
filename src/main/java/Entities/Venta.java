@@ -9,18 +9,18 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.GenerationType;
 
 @Entity
-@Getter @Setter
 public class Venta {
     
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    public int id;
+    private int id;
 
     private Date fecha;
     private String descripcion;
     private Float montoTotal;
 
-    @OneToOne
+
+     @OneToOne
     public Comprador c;
     @OneToOne
     public Oferta o;
@@ -32,5 +32,38 @@ public class Venta {
         this.montoTotal = montoTotal;
         this.c = c;
     }
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public Float getMontoTotal() {
+        return montoTotal;
+    }
+
+    public void setMontoTotal(Float montoTotal) {
+        this.montoTotal = montoTotal;
+    }
+
+   
 
 }

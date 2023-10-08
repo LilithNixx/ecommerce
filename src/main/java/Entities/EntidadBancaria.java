@@ -7,18 +7,17 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.GenerationType;
 
 @Entity
-@Getter @Setter
 public class EntidadBancaria {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    public int id;
+    private int id;
     
-    public String razonSocial;
-    public String direccion;
-    public int nroSucursal;
+    private String razonSocial;
+    private String direccion;
+    private int nroSucursal;
 
-    @OneToOne
+     @OneToOne
     public CuentaBancaria cb;
 
     public EntidadBancaria(int id, String razonSocial, String direccion, int nroSucursal) {
@@ -27,5 +26,40 @@ public class EntidadBancaria {
         this.direccion = direccion;
         this.nroSucursal = nroSucursal;
     }
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getRazonSocial() {
+        return razonSocial;
+    }
+
+    public void setRazonSocial(String razonSocial) {
+        this.razonSocial = razonSocial;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public int getNroSucursal() {
+        return nroSucursal;
+    }
+
+    public void setNroSucursal(int nroSucursal) {
+        this.nroSucursal = nroSucursal;
+    }
+
+   
 
 }

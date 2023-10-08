@@ -7,19 +7,18 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.GenerationType;
 
 @Entity
-@Getter @Setter
 public class Producto {
     
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    public int id;
+    private int id;
 
     
-    public String nombre;
-    public String especificacionesTecnicas;
-    public int codigoProducto;
+    private String nombre;
+    private String especificacionesTecnicas;
+    private int codigoProducto;
 
-    @OneToOne
+     @OneToOne
     public Oferta o;
 
     public Producto(int id, String nombre, String especificacionesTecnicas, int codigoProducto) {
@@ -28,5 +27,39 @@ public class Producto {
         this.especificacionesTecnicas = especificacionesTecnicas;
         this.codigoProducto = codigoProducto;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getEspecificacionesTecnicas() {
+        return especificacionesTecnicas;
+    }
+
+    public void setEspecificacionesTecnicas(String especificacionesTecnicas) {
+        this.especificacionesTecnicas = especificacionesTecnicas;
+    }
+
+    public int getCodigoProducto() {
+        return codigoProducto;
+    }
+
+    public void setCodigoProducto(int codigoProducto) {
+        this.codigoProducto = codigoProducto;
+    }
+
+   
 
 }

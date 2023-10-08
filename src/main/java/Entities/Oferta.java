@@ -1,6 +1,6 @@
 package Entities;
 
-import java.sql.Date;
+//import java.sql.Date;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,19 +9,18 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.GenerationType;
 
 @Entity
-@Getter @Setter
 public class Oferta {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 
-    public String descripcion;
-    public int stock;
-    public int codigoOferta;
-    public Float precio;
-    public Date vigencia;
+    private String descripcion;
+    private int stock;
+    private int codigoOferta;
+    private Float precio;
+    //private Date vigencia;
 
-    @OneToOne
+     @OneToOne
     public Venta v;
 
     @OneToOne
@@ -32,13 +31,63 @@ public class Oferta {
 
     protected Oferta() {}
 
-    public Oferta(String descripcion, int stock, int codigoOferta, Float precio, Date vigencia) {
-    
+    public Oferta(Long id, String descripcion, int stock, int codigoOferta, Float precio /*Date vigencia*/) {
+        
+        this.id = id;
         this.descripcion = descripcion;
         this.stock = stock;
         this.codigoOferta = codigoOferta;
         this.precio = precio;
-        this.vigencia = vigencia;
+       //this.vigencia = vigencia;
     }
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public int getCodigoOferta() {
+        return codigoOferta;
+    }
+
+    public void setCodigoOferta(int codigoOferta) {
+        this.codigoOferta = codigoOferta;
+    }
+
+    public Float getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(Float precio) {
+        this.precio = precio;
+    }
+
+   /*  public Date getVigencia() {
+        return vigencia;
+    }
+
+    public void setVigencia(Date vigencia) {
+        this.vigencia = vigencia;
+    }*/
 
 }
