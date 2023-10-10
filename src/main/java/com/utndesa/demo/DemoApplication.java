@@ -20,7 +20,7 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	
+	/*
 	@Bean 
 	public CommandLineRunner demo(OfertaRepository repository) {
 		return (args) -> {
@@ -46,5 +46,6 @@ public class DemoApplication {
 
 		};
 	}
+	 */
 
 }
